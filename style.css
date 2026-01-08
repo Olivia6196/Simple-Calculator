@@ -5,26 +5,28 @@
   font-family: monospace;
 }
 body{
-    background-image: url(./images/background\ image.jpeg);
-    background-position: center;
+    background-image: url(./images/background\ image.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
     display: flex;
     justify-content: center;
     margin-top: 5vw;
     overflow: hidden;
 }
-#cal-container{
+.cal-container{
     width: 25.2vw;
     height: 80vh;
-    border: 0.15vw solid rgb(85, 82, 82);
+    border: 0.15vw solid #e6e6e6;
     border-radius: 1.5vw;
-    box-shadow: 0 0 25px black;
-    background-color: rgb(85, 82, 82);
+    box-shadow: 8px 8px 20px black,
+                 -8px -8px 20px black;
+    background-color: #e6e6e6;
+    position: relative;
 }
 
-#buttons{
+.buttons{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1vw;
@@ -39,7 +41,7 @@ button{
     font-size: 2rem;
     outline: none;
     border-radius: 1vw;
-    border: 0.15vw solid #0c0c0cb4;
+    border:transparent;
     background-color: #0c0c0cb4;
     color: white;
     font-weight: bold;
@@ -49,20 +51,20 @@ button{
     position: relative;
     width: 21.7vw;
         height: 7vw;
-        outline: none;
         margin-left: 1.5vw;
         margin-top: 2.5vw;
-        margin-bottom: 3vw;
+        margin-bottom: 3.3vw;
         background-color: #c4c1c1;
-        border: 0.15vw solid #bbb3b3;
         border-radius: 1vw;
         cursor: pointer;
         overflow:hidden;
+        box-shadow: inset -3px -3px 6px #c5c1c1, 
+                     inset 4px 4px 6px #03030385;
 }
 .display-text{
 text-align: right;
     padding-right: 1.2vw;
-    padding-top: 0.4vw;
+    padding-top: 1vw;
     line-height: 1;
     font-size: 2.5rem;
     color: black;
@@ -75,30 +77,34 @@ text-align: right;
     color: black;
     font-weight: bold;
     right: 1.1vw;
-    top: 3.5vw;
+    top: 4vw;
 }
 
 .clear{
     background-color: #d63031;
-    border: 0.15vw solid #d63031;
+    border: transparent;
 }
 
 .operators{
-    background-color: #2979ff;
-    border: 0.15vw solid #2979ff;
+  color: #2979ff;
 }
+.operator{
+    background-color: #2979ff;
+    border-color: #2979ff;
+}
+
 @media (max-width : 768px) {
     body{
         margin-top: 0;
         background-image: none;
     }
-    #cal-container {
+    .cal-container {
             width: 99.9vw;
             height: 100vh;
             border-radius: 2vw;
             box-shadow: 0 0 35px;
         }
-    #buttons{
+    .buttons{
         gap: 0;
         padding-left: 12.5vw;
         padding-right: 0.5vw;
@@ -139,16 +145,14 @@ text-align: right;
             background-image: none;
         }
     
-        #cal-container {
+        .cal-container {
             width: 99.99vw;
             height: 100vh;
             border-radius: 2.5vw;
             box-shadow: 0 0 35px;
-            background-color: rgba(85, 82, 82, 0.932);
-            border: 0.15vw solid rgb(85, 82, 82, 0.932);
         }
     
-        #buttons {
+        .buttons {
             gap: 8vw;
             padding-left: 5.8vw;
             padding-right: 4vw;
@@ -187,12 +191,12 @@ text-align: right;
         margin-top: 0.5vw;
     } */
 
-    #cal-container {
+    .cal-container {
         width: 99.99vw;
         height: 100vh;
     }
 
-    #buttons {
+    .buttons {
         gap: 7vw;
         padding-left: 4.5vw;
         padding-right: 4vw;

@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="cal-container">
+    <div class="cal-container">
         <div class="display-wrapper">
             <div id="display" class="display-text">0</div>
             <div id="liveResult" class="live-inside"></div>
     </div>
-        <div id="buttons">
+        <div class="buttons">
             <button onclick="clearDisplay('AC')" class="clear">AC</button>
             <button onclick="clearLastDisplay('DEL')" class="clear">DEL</button>
             <button onclick="appendToDisplay('%')" class="operators">%</button>
@@ -29,10 +29,10 @@
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
             <button onclick="appendToDisplay('÷')" class="operators">÷</button>
+            <button onclick="appendToDisplay('.')">.</button>
             <button onclick="appendToDisplay('00')">00</button>
             <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()" class="operators">=</button>
+            <button onclick="calculate()" class="operator">=</button>
         </div>
     </div>
     <script src="./script.js"></script>
