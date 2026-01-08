@@ -54,12 +54,12 @@ button{
         margin-left: 1.5vw;
         margin-top: 2.5vw;
         margin-bottom: 3.3vw;
-        background-color: #c4c1c1;
+        background-color: #919482;
         border-radius: 1vw;
         cursor: pointer;
         overflow:hidden;
-        box-shadow: inset -3px -3px 6px #c5c1c1, 
-                     inset 4px 4px 6px #03030385;
+        box-shadow: inset -3px -3px 6px #919482, 
+                     inset 5px 5px 8px #03030385;
 }
 .display-text{
 text-align: right;
